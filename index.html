@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="calculator__group">
+      <div class="calculator">
+        <div class="calculator__form_group">
+          <div>
+            <form id="formBookmark" method="POST">
+              <input type="hidden" name="csrfmiddlewaretoken" value="PgeiVGiELj8M7GVePJ1hluT4CiCl5WFVxLquXEsq5ctBXEAnSgtTG3dMxWUZWgs5">
+              <input type="hidden" id="bookmark_user" name="bookmark_user" value="None">
+              <input type="hidden" id="bookmark_name" name="bookmark_name" value="Калькулятор наливного пола">
+              <input type="hidden" id="bookmark_url" name="bookmark_url" value="/app/kalkulyatory/kalkulyator-nalivnogo-pola/">
+              <input type="hidden" id="bookmark_post_url" name="bookmark_post_url" value="/bookmarks/add/">
+            </form>
+          </div>
+          <form class="calculator__form calculator__form_size" id="mixCalculator" onsubmit="return false;">
+            <label for="squareSurface">Площадь (м2):</label>
+            <input type="number" autocomplete="off" name="squareSurface" id="squareSurface" value="" placeholder="Площадь (м2)" required="" min="0" max="100001" step="any">
+            <label for="heightSurface">Толщина слоя (мм):</label>
+            <input type="number" autocomplete="off" name="heightSurface" id="heightSurface" value="" placeholder="Толщина слоя (мм)" required="" min="0" max="1001">
+            <input type="hidden" id="factor" name="factor" value="1500">
+            <input type="hidden" id="productCategory" name="productCategory" value="наливной пол">
+            <div class="button-inline">
+              <button class="button-calc" onclick="mainFunc();"><span class="button-text"><i class="fas fa-calculator"></i> Рассчитать</span></button>
+              <button type="reset" class="button-calc button-reset" onclick="location.reload();"><span class="button-text"><i></i> Сброс</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="result hide_elem" style="display:none" id="resultWindow">
+        <div class="card card_violet">
+          <div class="card__logo"><i class="far fa-list-alt"></i></div>
+          <div class="card__text">
+            <p><b><span id="prodName"></span>:</b></p>
+            <h2><span id="totalWeight"></span></h2>
+            <p>-------------------------</p>
+            <p><b>Площадь: </b><span id="totalSquare"></span></p>
+            <p><b>Толщина слоя: </b><span id="totalHeight"></span></p>
+          </div>
+        </div>
+        <form id="sendToEmailForm" action="/app/kalkulyatory/send-to-email/" method="POST">
+          <input type="hidden" name="csrfmiddlewaretoken" value="PgeiVGiELj8M7GVePJ1hluT4CiCl5WFVxLquXEsq5ctBXEAnSgtTG3dMxWUZWgs5">
+          <textarea hidden="" rows="10" cols="45" name="emailMessage" id="emailMessage"></textarea>
+          <textarea hidden="" rows="10" cols="45" name="emailSubject" id="emailSubject"></textarea>
+        </form>
+        <script src="js/commonmixcalc.js"></script>
+      </div>
+</div>
+</body>
+</html>

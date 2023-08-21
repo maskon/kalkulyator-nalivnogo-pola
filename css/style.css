@@ -1,0 +1,343 @@
+.calculator__group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: left;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    margin-bottom: 5px;
+
+}
+
+.calculator {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0px 20px 0;
+    /* background: gray; */
+    width: 400px;
+}
+
+.calculator__form_group {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px 15px 15px;
+    flex-grow: 1;
+    border-radius: 15px;
+    border: 3px solid rgb(66, 66, 66);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.calculator__form {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    flex-grow: 1;
+    border-radius: 15px;
+}
+
+.calculator__form > label {
+    color: rgb(90, 90, 90);
+    font-size: 12px;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.calculator__form > select,
+input,
+button {
+    margin: 5px;
+    padding: 0 35px 0 15px;
+    height: 50px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid rgb(66, 66, 66);
+    outline: none;
+    transition: 0.3s;
+    color: #5840bb;
+}
+
+.calculator__form_size > select,
+.calculator__form_size > input,
+.calculator__form_size > button {
+    width: 98%;
+}
+
+.calculator__form > input:focus,
+select:focus {
+    background: khaki;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.calculator__form > input:hover,
+select:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.calculator__form > select:hover {
+    cursor: pointer;
+}
+
+.calculator__form > select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("./img/caret-down-solid.svg");
+    background-position: 97% 50%;
+    background-repeat: no-repeat;
+    background-size: 15px;
+
+}
+
+.calculator__form option {
+    color: black;
+    font-weight: bold;
+}
+
+.calculator__form select:required:invalid {
+    color: gray;
+}
+
+.errorlist {
+    font-size: 12px;
+    color: red;
+}
+
+.select_form__inner {
+  margin: 5px;
+  padding: 0 35px 0 15px;
+  height: 50px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid rgb(66, 66, 66);
+  outline: none;
+  transition: 0.3s;
+  color: #5840bb;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("./img/caret-down-solid.svg");
+  background-position: 97% 50%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+
+/* ************ BUTTON 1 ************  */
+.button-calc {
+    background-color: #42427d;
+    border: 2px solid rgb(66, 66, 66);
+    border-radius: 10px;
+    height: auto;
+    padding: 12px 0px 12px 0px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.button-calc:hover {
+    background-color: #42427db6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.button-calc:hover i {
+    transform: rotate(360deg);
+}
+
+.button-calc:active {
+    background-color: #363668;
+    outline: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.button-reset {
+    background: #dddddd;
+}
+
+.button-reset:hover {
+    background: #cbcbcb;
+}
+
+.button-reset span {
+    color: #7a7a7a;
+}
+
+.button-reset:hover span {
+    color: #212121;
+    transition: 0.5s;
+}
+
+.button-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button-inline span {
+    margin: 0 25px 0 25px;
+}
+
+.button-inline > .button-reset > span {
+    margin: 0 15px 0 0;
+}
+
+
+.button-text {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Exo 2", sans-serif;
+    padding: 15px 0px 15px 0px;
+}
+
+.button-text > i {
+    margin-right: 15px;
+    transition: 0.4s;
+}
+
+.button-calc_reset {
+    text-align: center;
+    padding: 0px;
+}
+
+.button-calc_reset:hover {
+    background-color: #7d4242b6;
+}
+
+.button-text_reset > i {
+    margin-right: 0px;
+}
+
+/*******************************************/
+.result {
+    display: flex;
+    padding: 12px 20px 20px 40px;
+}
+
+.result_hidden {
+    display: none;
+}
+
+/*******************************************/
+.card {
+    border-radius: 30px 0px 30px 0px;
+    padding: 20px;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.card_violet {
+    background-color: #5f4fb6;
+    box-shadow: 0 0 10px rgba(21, 0, 61, 0.5);
+}
+
+.card_reverse {
+    border-radius: 0px 30px 0px 30px;
+}
+
+.card__logo {
+    background-color: #ffffff;
+    color: #42427d;
+    border-radius: 20px 0px 20px 0px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.card__text {
+    background-color: #e8e8ff;
+    color: #4b359f;
+    margin: 5px;
+    padding: 10px 10px 10px 20px;
+    border-radius: 20px 0px 20px 0px;
+    width: 100%;
+}
+
+.card__text p {
+    font-size: 16px;
+    margin: 5px 0 5px 0;
+    padding: 0 0 0 0;
+}
+
+
+/* -----------MEDIA---------------- */
+
+@media screen and (max-width: 1200px) {
+
+    .calculator__group {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .calculator {
+        width: 100%;
+    }
+
+    .calc__list_item li:before {
+        counter-increment: li;
+        content: none;
+    }
+
+    .calculator__form_inline > select {
+        /*min-width: none;*/
+        width: 100%;
+    }
+
+    .card__logo {
+        display: none;
+    }
+
+    .card {
+        border-radius: 30px 0px 30px 0px;
+        padding: 10px;
+        max-width: none;
+        width: 95%;
+        /* max-width: 350px; */
+    }
+
+    .calculator__form {
+        padding: 15px 5px 15px 5px;
+    }
+
+    .result {
+        display: flex;
+        padding: 10px 5px 10px 5px;
+    }
+
+    .header__title h1 {
+        font-size: 18px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .table-result {
+        font-size: 12px;
+    }
+
+    .image__text {
+        width: 60px;
+    }
+
+    .button-inline .button-text > i {
+        display: none;
+    }
+
+    .button-inline span {
+        margin: 0 8px 0 8px;
+        font-size: 16px;
+    }
+
+    .button-inline > .button-reset > span {
+        margin: 0 8px 0 8px;
+        font-size: 16px;
+    }
+}
